@@ -42,6 +42,8 @@ export function getConfig() {
     reminderMinutes: numberEnv('REMINDER_MINUTES', 10, { min: 1 }),
     pollIntervalSeconds: numberEnv('POLL_INTERVAL_SECONDS', 30, { min: 5 }),
     port: numberEnv('PORT', 3000, { min: 1 }),
+    mongodbUri: process.env.MONGODB_URI || '',
+    mongodbDatabase: process.env.MONGODB_DATABASE || '',
     dataFile: process.env.DATA_FILE || './data/bot-state.json',
     logLevel: process.env.LOG_LEVEL || 'info'
   };

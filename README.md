@@ -64,5 +64,9 @@ Render/Railway/Fly kabi platformalarda quyidagi env varlar kerak:
 - `TIMEZONE=Asia/Tashkent`
 - `REMINDER_MINUTES=10`
 - `POLL_INTERVAL_SECONDS=30`
+- `MONGODB_URI=mongodb://localhost:27017/student-bot` MongoDB ishlatilsa
+- `MONGODB_DATABASE` kerak bo'lsa alohida database nomi
 - `DATA_FILE=/data/bot-state.json` persistent disk ishlatilsa
+
+`MONGODB_URI` berilsa bot ro'yxatdan o'tgan foydalanuvchilar va yuborilgan eslatmalarni MongoDBga yozadi. `MONGODB_URI` bo'lmasa eski lokal JSON fayl storage ishlatiladi.
 
