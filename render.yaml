@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: student-bot
+    env: node
+    plan: free
+    buildCommand: npm install --omit=dev
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: TIMEZONE
+        value: Asia/Tashkent
+      - key: REMINDER_MINUTES
+        value: 10
+      - key: POLL_INTERVAL_SECONDS
+        value: 30
+      - key: DATA_FILE
+        value: /data/bot-state.json
+
